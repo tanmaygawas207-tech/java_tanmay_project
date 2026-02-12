@@ -1,0 +1,63 @@
+# java_tanmay_project
+java 
+
+java code 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+ <script>
+    var val="";
+
+function  calculator(n){
+    document.getElementById("num").value+=n;
+
+}
+
+function operationclick(o){
+    val+=document.getElementById("num").value;
+    val+=o;
+    document.getElementById("num").value="";
+
+}
+
+function equalclick(){
+   val+= document.getElementById("num").value 
+   document.getElementById("num").value = eval(val);//+"jujj"+val; 
+    val = "";
+}
+
+function reset123(){
+    val+="";
+    document.getElementById("num").value="";
+}
+ </script>
+</head>
+<body>
+    <input type="text" id="num" placeholder="enter no."><br>
+
+ 
+    <input type="button" value="1" onclick="calculator('1')">
+    <input type="button" value="2" onclick="calculator('2')">
+    <input type="button" value="3" onclick="calculator('3')">
+    <input type="button" value="-" onclick="operationclick('-')"><br>
+    <input type="button" value="4" onclick="calculator('4')">
+    <input type="button" value="5" onclick="calculator('5')">
+    <input type="button" value="6" onclick="calculator('6')">
+    <input type="button" value="+" onclick="operationclick('+')"><br>
+    <input type="button" value="7" onclick="calculator('7')">
+    <input type="button" value="8" onclick="calculator('8')">
+    <input type="button" value="9" onclick="calculator('9')">
+    <input type="button" value="/" onclick="operationclick('/')"><br>
+    <input type="button" value="C" onclick="reset123('C')">
+    <input type="button" value="0" onclick="calculator('0')">
+    <input type="button" value="*" onclick="operationclick('*')">
+    <input type="button" value="=" onclick="equalclick()"><br>
+
+    
+</body>
+</html>
+
